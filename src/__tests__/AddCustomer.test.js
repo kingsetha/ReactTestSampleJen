@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AddCustomer from "./AddCustomer";
+import AddCustomer from "../AddCustomer";
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';

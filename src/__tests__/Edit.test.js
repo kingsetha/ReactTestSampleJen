@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import EditR from "./EditR";
+import Edit from "../Edit";
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
@@ -12,52 +12,53 @@ jest.mock('react-router-dom', () => ({
     useNavigate: jest.fn(),
   }));
   const mock = new MockAdapter(axios);
+
   test('renders Add orders Name ', () => {
-    render(<EditR />);
+    render(<Edit />);
     const linkElement = screen.getByRole("name1");
     expect(linkElement).toBeInTheDocument();
 });
  
 test('renders Add count ', () => {
-    render(<EditR />);
+    render(<Edit />);
     const linkElement = screen.getByRole("id1");
     expect(linkElement).toBeInTheDocument();
 });
  
 test('renders Add address ', () => {
-    render(<EditR />);
-    const linkElement = screen.getByRole("type1");
+    render(<Edit />);
+    const linkElement = screen.getByRole("count1");
     expect(linkElement).toBeInTheDocument();
 });
 test('renders Add orders Name ', () => {
-    render(<EditR />);
+    render(<Edit />);
     const linkElement = screen.getByRole("name");
     expect(linkElement).toBeInTheDocument();
 });
  
 test('renders Add count ', () => {
-    render(<EditR />);
+    render(<Edit />);
     const linkElement = screen.getByRole("id");
     expect(linkElement).toBeInTheDocument();
 });
  
 test('renders Add address ', () => {
-    render(<EditR />);
-    const linkElement = screen.getByRole("type");
+    render(<Edit />);
+    const linkElement = screen.getByRole("count");
     expect(linkElement).toBeInTheDocument();
 }); 
 test('renders Add address ', () => {
-    render(<EditR />);
+    render(<Edit />);
     const linkElement = screen.getByRole("update");
     expect(linkElement).toBeInTheDocument();
 }); 
 test('renders Add address ', () => {
-    render(<EditR />);
-    const linkElement = screen.getByRole("timing");
+    render(<Edit />);
+    const linkElement = screen.getByRole("address");
     expect(linkElement).toBeInTheDocument();
 }); 
 test('renders Add address ', () => {
-    render(<EditR />);
-    const linkElement = screen.getByRole("time1");
+    render(<Edit />);
+    const linkElement = screen.getByRole("address1");
     expect(linkElement).toBeInTheDocument();
 }); 

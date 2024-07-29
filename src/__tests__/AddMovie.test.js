@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import AddMovie from "./AddMovie";
+import AddMovie from "../AddMovie";
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
