@@ -5,8 +5,8 @@ import "./App2.css";
 import "./App.css";
  
 function View(){
-  const [columns, setColumns] = useState([]);
-  const [records, setRecords] = useState([]);
+  const [columns] = useState([]);
+  const [records] = useState([]);
   const navigate = useNavigate();
  
   useEffect(() => {
